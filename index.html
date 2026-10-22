@@ -1,38 +1,409 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for our Expense Tracker application.">
+  <title>Privacy Policy | Expense Tracker</title>
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="expense_app">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+    :root {
+      --green: #16845b;
+      --dark: #172b25;
+      --muted: #66756e;
+      --background: #f5f8f5;
+      --border: #e4ebe5;
+    }
 
-  <title>expense_app</title>
-  <link rel="manifest" href="manifest.json">
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--dark);
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .logo {
+      background: var(--green);
+      color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+    }
+
+    .nav-label {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 20px 45px;
+    }
+
+    .badge {
+      display: inline-block;
+      color: var(--green);
+      background: #e3f3e9;
+      padding: 6px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 50px);
+      letter-spacing: -1.5px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto 70px;
+      padding: 0 20px;
+    }
+
+    .notice {
+      background: #eaf5ed;
+      border: 1px solid #d3e9d9;
+      padding: 22px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      display: flex;
+      gap: 14px;
+    }
+
+    .notice-icon {
+      font-size: 24px;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .notice p {
+      color: #4d6558;
+      font-size: 14px;
+    }
+
+    .policy-card {
+      background: #ffffff;
+      padding: clamp(24px, 5vw, 45px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(28, 62, 42, 0.04);
+    }
+
+    .updated {
+      color: var(--muted);
+      font-size: 13px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 25px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+
+    section p,
+    section li {
+      color: #52625a;
+      font-size: 15px;
+    }
+
+    section ul {
+      padding-left: 23px;
+      margin-top: 10px;
+    }
+
+    section li {
+      padding-left: 4px;
+      margin-bottom: 7px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 28px 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        padding: 16px 5%;
+      }
+
+      .nav-label {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .container {
+        padding: 0 12px;
+      }
+
+      .policy-card {
+        border-radius: 14px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+
+  <header class="navbar">
+    <div class="brand">
+      <div class="logo">₱</div>
+      <span>Expense Tracker</span>
+    </div>
+    <span class="nav-label">Privacy & Security</span>
+  </header>
+
+  <main>
+    <div class="hero">
+      <span class="badge">YOUR PRIVACY MATTERS</span>
+      <h1>Privacy Policy</h1>
+      <p>
+        A clear explanation of how our Expense Tracker handles
+        information when you use the application.
+      </p>
+    </div>
+
+    <div class="container">
+
+      <div class="notice">
+        <div class="notice-icon">🛡️</div>
+        <div>
+          <strong>Designed with privacy in mind</strong>
+          <p>
+            Our app does not require you to create an account,
+            provide a username, or enter your email address.
+            Your expense information is handled according to
+            the app's actual storage and technical configuration.
+          </p>
+        </div>
+      </div>
+
+      <article class="policy-card">
+
+        <p class="updated">
+          Effective Date: October 22, 2026
+        </p>
+
+        <section>
+          <h2>1. Introduction</h2>
+          <p>
+            Welcome to Expense Tracker. This Privacy Policy explains
+            how information may be collected, used, stored, and
+            protected when you use our application. We aim to
+            respect your privacy and be transparent about our
+            information practices.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Information We Collect</h2>
+          <p>
+            Expense Tracker does not require users to register
+            an account or provide a username, email address,
+            or password.
+          </p>
+          <p>
+            Depending on the features you use and how the app
+            is configured, the application may handle:
+          </p>
+          <ul>
+            <li>Expense amounts and transaction descriptions.</li>
+            <li>Expense categories and transaction dates.</li>
+            <li>Budget limits, totals, and spending summaries.</li>
+            <li>App settings and preferences.</li>
+            <li>Technical or diagnostic information, if collected by the app or its service providers.</li>
+          </ul>
+          <p>
+            Please do not enter sensitive personal or financial
+            information that the app does not need.
+          </p>
+        </section>
+
+        <section>
+          <h2>3. How We Use Information</h2>
+          <p>Information handled by the app may be used to:</p>
+          <ul>
+            <li>Record and organize your expenses.</li>
+            <li>Calculate spending totals and budget summaries.</li>
+            <li>Display transaction history and expense categories.</li>
+            <li>Save preferences and support app functionality.</li>
+            <li>Diagnose technical issues and improve reliability.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Data Storage</h2>
+          <p>
+            Expense information may be stored locally on your
+            device or processed using a backend service, depending
+            on the application's implementation.
+          </p>
+          <p>
+            If a cloud database such as Supabase is enabled,
+            relevant data may be transmitted to and stored by
+            that service. Please review the app's actual
+            configuration to determine where your information
+            is stored.
+          </p>
+          <p>
+            Supabase Privacy Policy:
+            <a href="https://supabase.com/privacy"
+               target="_blank" rel="noopener noreferrer">
+              https://supabase.com/privacy
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2>5. Sharing of Information</h2>
+          <p>
+            We do not sell personal information to third parties.
+            Information may be processed by service providers
+            needed to operate the application or when disclosure
+            is required by law.
+          </p>
+          <p>
+            We do not claim that information is never transmitted
+            to third parties; this depends on the services and
+            features enabled in the app.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. Data Security</h2>
+          <p>
+            Reasonable measures should be used to protect
+            information handled by the application against
+            unauthorized access, loss, misuse, or disclosure.
+            However, no electronic storage system or method
+            of transmission can be guaranteed completely secure.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Data Retention and Deletion</h2>
+          <p>
+            The retention of expense records depends on how
+            the app stores data. Records stored locally may
+            remain on your device until they are deleted or
+            the app's data is cleared or the app is uninstalled.
+            Cloud-stored records may require a separate deletion
+            process.
+          </p>
+          <p>
+            If you need assistance with personal information
+            handled by the app, contact the developer using
+            the contact details provided in the app's store listing.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Children's Privacy</h2>
+          <p>
+            The application is not intended to knowingly collect
+            personal information from children without any
+            authorization required by applicable law. If you
+            believe personal information has been collected
+            improperly, please contact the developer.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. Your Privacy Rights</h2>
+          <p>
+            Depending on your location and applicable laws,
+            you may have rights to request access to, correction
+            of, or deletion of your personal information.
+            Requests will be handled in accordance with
+            applicable privacy requirements.
+          </p>
+        </section>
+
+        <section>
+          <h2>10. Changes to This Policy</h2>
+          <p>
+            This Privacy Policy may be updated when the app's
+            features, data practices, or legal requirements change.
+            Updates will be published on this page with a revised
+            effective date.
+          </p>
+        </section>
+
+        <section>
+          <h2>11. Contact Us</h2>
+          <p>
+            If you have questions about this Privacy Policy
+            or the handling of information by Expense Tracker,
+            contact the application developer through the
+            contact information provided in the app's store listing.
+          </p>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Expense Tracker. All rights reserved.</p>
+    <p>Privacy-focused expense management.</p>
+  </footer>
+
 </body>
 </html>
